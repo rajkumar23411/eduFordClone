@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="sub-header">
+        <nav>
+            <div class="logo">
+                <img src="logo.png">
+            </div>
+            <div class="nav-tags">
+                <ul>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="About.html">About</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="Blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </ul>
+            </div>
+            <div id="burger"></div>
+        </nav>
+        <h1>Contact Us</h1>
+    </div>
+
+    <!-- ------------contact us----------- -->
+    <section class="location">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d28608.546100813146!2d91.4671478!3d26.324288999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1630510541973!5m2!1sen!2sin"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <section class="cont-us">
+        <div class="cont-row">
+            <div class="cont-col">
+                <div>
+                    <i class="fas fa-home"></i>
+                    <span>
+                        <h5>Hajo-Nalbari Road, The Dee Tower</h5>
+                        <p>Nalbari, Assam, IN</p>
+                    </span>
+                </div>
+                <div>
+                    <i class="fas fa-phone"></i>
+                    <span>
+                        <h5>+91 001 555 6668</h5>
+                        <p>Monday to Saturday, 10AM - 6PM</p>
+                    </span>
+                </div>
+                <div>
+                    <i class="far fa-envelope"></i>
+                    <span>
+                        <h5>rajkumarriya001@gmail.com</h5>
+                        <p>Mail Us About Your Query</p>
+                    </span>
+                </div>
+            </div>
+            <div class="cont-col">
+                <form action="">
+                    <input type="text" placeholder="Enter Your Name" required>
+                    <input type="text" placeholder="Enter Your Email" required>
+                    <input type="text" placeholder="Enter Your Subject" required>
+                    <textarea rows="8" placeholder="Message"></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- -----------------Quick Links--------------- -->
+    <footer class="holder">
+        <div class="link-row">
+            <div class="link-cols">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a>Academic Regulation</a></li>
+                    <li><a>Programmes at a glance</a></li>
+                    <li><a>Colleges</a></li>
+                    <li><a>Annual Report Submission</a></li>
+                </ul>
+            </div>
+
+            <div class="link-cols">
+                <h4>Download</h4>
+                <ul class="ul1">
+                    <li><a>Forms, Formats and Documents</a></li>
+                    <li><a>Holiday List 2021</a></li>
+                    <li><a>Academic Calendar</a></li>
+                    <li><a>Screen reader</a></li>
+                </ul>
+            </div>
+
+            <div class="link-cols">
+                <h4>Help Desk</h4>
+                <ul class="ul1">
+                    <li><a>FAQs</a></li>
+                    <li><a>Site Map</a></li>
+                    <li><a>Contact Information</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ----------------Footer Bottom--------------- -->
+    <section class="bottom-footer">
+        <div class="texts">
+            <p>Copyright All Right Reserved 2021, Eduford</p>
+            <ul>
+                <li>Legal</li>
+                <li class="li1">Privacy Policy</li>
+                <li class="li1">Cookie Statement</li>
+            </ul>
+        </div>
+    </section>
+
+
+
+
+<!-- ------------scroll up button------------------ -->
+ 
+<button class="scrl-btn" onclick="topFunction()"><i class="fas fa-angle-up"></i></button>
+
+<!-- -----------JAVASCRIPT----------------- -->
+
+    <script>
+        const burger = document.getElementById('burger');
+        const nav = document.querySelector('.nav-tags');
+        const scrlBtn = document.querySelector('.scrl-btn');
+
+        document.onclick = function (e) {
+            if (e.target.id !== '.nav-tags' && e.target.id !== 'burger') {
+                burger.classList.remove('active');
+                nav.classList.remove('active');
+            }
+        }
+
+        burger.onclick = function () {
+            burger.classList.toggle('active');
+            nav.classList.toggle('active');
+        }
+
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction(){
+            if(document.documentElement.scrollTop > 500){
+                scrlBtn.style.display = "block";
+            }
+            else{
+                scrlBtn.style.display = "none";
+            }
+        }
+
+        function topFunction(){
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+
+</html>
